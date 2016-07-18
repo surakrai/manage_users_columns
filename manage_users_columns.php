@@ -40,7 +40,7 @@ function mimo_modify_user_table_row( $value, $column_name, $user_id ) {
           '%s ครั้ง %s ชิ้น %s<br><a href="%s" target="_blank" >ดูเพิ่มเติม &rarr;</a>',
           count($customer_orders),
           $total_item,
-          wc_price( $total_amount, array( 'currency' => $order->get_order_currency() ) ),
+          wc_price( $total_amount ),
           esc_url( add_query_arg( array( 'post_status' => 'wc-completed', 'post_type' => 'shop_order', '_customer_user' => $user_id ), admin_url( 'edit.php' ) ) )
         );
 
